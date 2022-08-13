@@ -71,4 +71,9 @@ section p {
 max-width: 14px;
 height: auto;
 }
-
+.cards-list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow-x: auto;
+}

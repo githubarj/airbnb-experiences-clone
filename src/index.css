@@ -53,8 +53,9 @@ p {
   padding-bottom: 10px;
 }
 
-.katie-pic {
+.pic {
   border-radius: 9px;
+  max-width: 264px;
 }
 
 section p {
@@ -70,5 +71,4 @@ section p {
 max-width: 14px;
 height: auto;
 }
-
 

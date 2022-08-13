@@ -3,34 +3,26 @@ import "./index.css";
 import Navbar from "./Navbar";
 import Hero from "./Hero";
 import Card from "./Card";
-import katie from "./assets/katie-zaferes.png";
+import data from "./data.json";
 
-/*
-Challenge: Pass props to the Card component and display that data
 
-- img ("katie-zaferes.png")
-- rating ("5.0")
-- reviewCount (6)
-- country (Whatever you want)
-- title ("Life Lessons with Katie Zaferes")
-- price (136)
-
-*/
+const card = data.map((card) => (
+  <Card
+    img={card.coverImg}
+    rating={card.stats.rating}
+    reviewCount={card.stats.reviewCount}
+    location={card.location}
+    title={card.title}
+    price={card.price}
+  />
+));
 
 export default function App() {
   return (
     <div className="container">
       <Navbar />
       <Hero />
-
-      <Card
-        img={katie}
-        rating="5.0"
-        reviewCount={6}
-        country="USA"
-        title="Life lesons with Katie Zaferes"
-        price={136}
-      />
+      {card}
     </div>
   );
 }
